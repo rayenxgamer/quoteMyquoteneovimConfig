@@ -87,5 +87,11 @@ return {
         end
     },
 
-
+    {
+        "Mofiqul/dracula.nvim",
+        name = "dracula",
+        config = function()
+            ColorMyPencils()
+        end
+    },
 }
