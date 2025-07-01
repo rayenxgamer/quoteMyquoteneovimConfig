@@ -1,4 +1,3 @@
-
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -13,6 +12,7 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
+        "Jezda1337/nvim-html-css",
     },
 
     config = function()
@@ -45,6 +45,7 @@ return {
                 "rust_analyzer",
                 "clangd",
                 "pyright",
+                "html"
             },
             handlers = {
                 function(server_name) -- default handler
@@ -83,6 +84,25 @@ return {
                         }
                     }
                 end,
+                ["html"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.html.setup {
+                        capabilities = capabilities,
+                        settings = {
+                        html = {
+                          format = {
+                            templating = true,
+                            wrapLineLength = 120,
+                            wrapAttributes = 'auto',
+                          },
+                          hover = {
+                            documentation = true,
+                            references = true,
+                          },
+                        },
+                      },
+                      }
+                end,
             }
         })
 
@@ -119,5 +139,6 @@ return {
                 prefix = "",
             },
         })
-    end
+    end,
+
 }
