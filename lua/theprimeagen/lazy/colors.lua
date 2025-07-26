@@ -5,8 +5,74 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
-
 return {
+  {
+    'wurli/cobalt.nvim',
+      config = function ()
+       ColorMyPencils()
+      end
+  },
+    {
+      "kwsp/halcyon-neovim",
+        config = function ()
+         ColorMyPencils()
+        end
+    },
+    {
+        "shaunsingh/solarized.nvim",
+        config = function ()
+         ColorMyPencils()
+        end
+    },
+    {
+        "matsuuu/pinkmare",
+        config = function ()
+         ColorMyPencils()
+        end
+    },
+    {
+        "zekzekus/menguless",
+        config = function ()
+         ColorMyPencils()
+        end
+    },
+    {
+        "nikolvs/vim-sunbather",
+        config = function ()
+         ColorMyPencils()
+        end
+    },
+    {
+        "eldritch-theme/eldritch.nvim",
+        config = function ()
+         ColorMyPencils()
+        end
+    },
+    {
+        "marko-cerovac/material.nvim",
+        config = function ()
+         ColorMyPencils()
+        end
+    },
+    {
+        "embark-theme/vim",
+        config = function ()
+         ColorMyPencils()
+        end
+    },
+    {
+        "nyoom-engineering/oxocarbon.nvim",
+      config = function ()
+        ColorMyPencils()
+      end
+    },
+
+    {
+        "rayenxgamer/ren.nvim",
+        config = function()
+            ColorMyPencils()
+        end
+    },
 
     {
         "erikbackman/brightburn.vim",

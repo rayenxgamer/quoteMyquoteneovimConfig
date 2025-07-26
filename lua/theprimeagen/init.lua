@@ -49,12 +49,12 @@ autocmd({"BufWritePre"}, {
 autocmd('BufEnter', {
     group = ThePrimeagenGroup,
     callback = function()
-        if vim.bo.filetype == "zig" then
-            vim.cmd.colorscheme("tokyonight-night")
-        else
-            vim.cmd.colorscheme("dracula")
-        end
-    end
+      if vim.bo.filetype == "java" then
+          vim.cmd.colorscheme("blue")
+      else
+          vim.cmd.colorscheme("oxocarbon");
+      end
+    end,
 })
 
 autocmd({"CursorHold"}, {
