@@ -48,14 +48,16 @@ autocmd({"BufWritePre"}, {
 
 autocmd('BufEnter', {
     group = ThePrimeagenGroup,
-    callback = function()
-      if vim.bo.filetype == "java" then
+     callback = function()
+     --[[ if vim.bo.filetype == "java" then
           vim.cmd.colorscheme("blue")
       else
           vim.cmd.colorscheme("dracula");
-      end
+      end ]]
     end,
 })
+
+vim.cmd.colorscheme("dracula");
 
 autocmd({"CursorHold"}, {
   group = ThePrimeagenGroup,
@@ -90,3 +92,8 @@ autocmd('LspAttach', {
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+local custom_gruvbox = require'lualine.themes.gruvbox'
+require('lualine').setup {
+  options = { theme  = custom_gruvbox },
+}
