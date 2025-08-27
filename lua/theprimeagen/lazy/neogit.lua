@@ -10,9 +10,4 @@ return {
     "echasnovski/mini.pick",         -- optional
     "folke/snacks.nvim",             -- optional
   },
-
-   -- config = function()
-   --  local comment = require("neogit")
-   --  comment:setup()
-   -- end,
 }

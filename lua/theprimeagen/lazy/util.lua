@@ -1,4 +1,4 @@
-return{
+return {
   {
   'gelguy/wilder.nvim',
    config = function()
@@ -12,5 +12,13 @@ return{
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function ()
     end
+  },
+
+  {
+    "aserowy/tmux.nvim",
+    config = function ()
+      local tmux = require('tmux')
+      tmux.setup();
+    end,
   }
 }
