@@ -17,8 +17,18 @@ return {
   {
     "aserowy/tmux.nvim",
     config = function ()
-      local tmux = require('tmux')
-      tmux.setup();
+        return require("tmux").setup({
+            copy_sync = {
+                enable = false
+            },
+        })
     end,
+  },
+
+  {
+    "DanilaMihailov/beacon.nvim",
+    config = function()
+      require('beacon').setup()
+    end
   }
 }

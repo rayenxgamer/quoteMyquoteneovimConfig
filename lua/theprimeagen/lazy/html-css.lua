@@ -1,5 +1,5 @@
 return {
- "Jezda1337/nvim-html-css",
+ --[[ "Jezda1337/nvim-html-css",
   dependencies = { "hrsh7th/nvim-cmp", "nvim-treesitter/nvim-treesitter" }, -- Use this if you're using nvim-cmp
   opts = {
     enable_on = { -- Example file types
@@ -34,5 +34,5 @@ return {
       "https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.3/css/bulma.min.css",
       "./index.css", -- `./` refers to the current working directory.
     },
-  },
+  }, ]]
 }

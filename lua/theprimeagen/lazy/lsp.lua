@@ -1,7 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
-        "stevearc/conform.nvim",
+     --   "stevearc/conform.nvim",
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "hrsh7th/cmp-nvim-lsp",
@@ -16,18 +16,18 @@ return {
     },
 
     config = function()
-        require("conform").setup({
-            formatters_by_ft = {
-                python = { "black" },
-            }
-        })
+        -- require("conform").setup({
+        --     formatters_by_ft = {
+        --         python = { "black" },
+        --     }
+        -- })
 
         -- Format on save
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            callback = function(args)
-                require("conform").format({ bufnr = args.buf })
-            end,
-        })
+        -- vim.api.nvim_create_autocmd("BufWritePre", {
+        --     callback = function(args)
+        --         require("conform").format({ bufnr = args.buf })
+        --     end,
+        -- })
 
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
